@@ -1,1 +1,8 @@
-
+def recupereNoLigneSelectionne():
+        noLigne = 0
+        tupleSelectionne = lp.curselection()  # curselection() renvoie un tuple (n0 ligne, titre)
+        if tupleSelectionne:
+            noLigne = 1 + tupleSelectionne[0]  # No de ligne + 1
+            print("numero de ligne selectionnee =" + str(noLigne))  # pour controle
+            messageUtilisateur.set('...')  # On efface un message d'erreur utilisateur residuel, car OK
+        return noLigne
